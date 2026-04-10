@@ -1,0 +1,256 @@
+:root {
+    --text-color:   #fff;
+    --button-hover: #343434;
+}
+
+*{                                         
+    margin:     0px;                        
+    padding:    0px;
+    box-sizing: border-box;                 
+    font-family:"Montserrat", sans-serif;   /* Formato de texto utilizado */
+}
+
+a{                                          
+    text-decoration: none;
+}
+
+.flex{                                      /* Todo el cuerpo de HTML tendra FLEX */
+    display:    flex;
+    flex-flow:  column nowrap;
+}
+
+.margen-interno{                            /* Todo texto tiene esta clase, da un espacio interno en el eje X */
+    padding: 0 50px;
+}
+
+
+.header{                                    /* Cabecera con las distintas opciones del navegador y el fondo de la página */
+    
+    display:                flex;
+    flex-flow:              column nowrap;
+    height:                 100vh;
+
+    background:             url(../images/background.jpg);
+    background-position:    center;
+    background-size:        cover;
+}
+
+.menu{                                      /* Tamaño, posición y color del menu */
+    display:        flex;
+    flex-flow:      row nowrap;
+    align-items:    center;
+    height:         60px;
+    gap:            7px;
+    background:     rgba(0,0,0,.1);
+    border-bottom:  1px solid rgba(255, 255, 255, .5);
+}
+    
+.logo{                                      /* Propiedades del botón logo */
+    flex:           1 auto;
+    letter-spacing: 2px;
+    font-size:      30px;
+    color:          var(--text-color);
+    transition-duration: 0.25s;
+}
+
+.logo:hover{
+    color:      var(--button-hover);
+}
+
+nav{                                        /* Los botones de navegación toman mayor parte del menu */
+    flex: 5 1 auto;
+}
+
+nav a{                                      /* Propiedades del botón de nav */
+    font-size:      12px;
+    text-transform: uppercase;
+    padding:        0 20px;
+    letter-spacing: 3px;
+    color:          var(--text-color);
+    transition-duration: 0.25s;
+}
+
+nav a:hover{
+    color:      var(--button-hover);
+}
+
+.social{                                    /* Los botones sociales toman la parte restante del menu */
+    display:        flex;
+    flex:           1 1 auto;
+}
+
+.social a{                                  /* Propiedades de los botones sociales */
+    font-size:  20px;
+    padding:    0 10px;
+    color:      var(--text-color);
+    transition-duration: 0.25s;
+}
+
+.social a:hover{
+    color:      var(--button-hover);
+}
+
+.texto-principal{                           /* Texto principal de la página */
+    height:         760px;
+    display:        flex;
+    align-items:    center;
+}
+
+.texto-principal p{                         /* Propiedades aplicadas a la etiqueta 'p' dentro de la clase */
+    font-family:    "Lora", serif;
+    font-size:      21px;
+    font-weight:    300;
+    line-height:    1.6;
+    text-align:     center;
+    color:          var(--text-color);
+}
+
+
+.section{                                   /* Artículos de la página con sección de navegación y noticias a un costado */
+    display:    flex;
+    gap:        0 5px;
+    background: #F7F7F7;
+}
+
+.articles{                                  /* Contiene los articulos/noticias que ocupa la mayor parte y una sección de navegación */
+    display:    flex;
+    flex-flow:  row wrap;
+    width:      85%;
+    background: #f7f7f7;
+}
+
+article{                                    /* Propiedades generales de los artículos */
+    flex:           1 1 40%;
+    font-size:      13px;
+    letter-spacing: 1px;
+    margin:         10px 10px 0 0;
+    background:     #ececec;
+    color:          #444;
+}
+
+article img{
+    width:      100%;
+}
+
+article a{                                  /* Propiedades del botón "Leer más..." */
+    font-size:      13px;
+    padding:        10px;
+    margin:         10px 0;
+    display:        inline-block;
+    background:     #000;
+    color:          var(--text-color);
+    transition-duration: 0.25s;
+}
+
+article a:hover{
+    background:     #546cc3;
+}
+
+h3{                                         /* Propiedades de la fecha del artículo (dentro de la imagen) */
+    font-size:      12px;
+    padding:        10px 0 10px 10px;
+    margin-top:     -80px;
+    color:          var(--text-color);
+}
+
+h2{                                         /* Propiedades del título del artículo (dentro de la imagen) */
+    font-size:      25px;
+    text-transform: uppercase;
+    padding:        0 0 10px 10px;
+    color:          var(--text-color);
+}
+
+.navegacion{                                /* Propiedades de la sección de navegación debajo de los artículos */
+    flex:           1 1 100%;
+    margin:         10px 10px 0 0px;
+    background:     #000;
+}
+
+.navegacion a{                              /* Propiedades del botón de navegación de los artículos*/
+    font-size:      12px;
+    text-transform: uppercase;
+    padding:        0 10px;
+    letter-spacing: 2px;
+    color:          var(--text-color);
+}
+
+aside{                                      /* Artículos del costado derecho */
+    display:    flex;
+    flex:       1 1 auto;
+    flex-direction:column;
+    margin:     10px 0 0 0;
+}
+
+aside img{
+    width:      100%;
+}
+
+h4{                                         /* Propiedades de la etiqueta 'h4' dentro del aside */
+    padding:        10px;
+    text-transform: uppercase;
+    background:     #000;
+    color:          var(--text-color);
+}
+
+
+.footer{                                    /* Pie de página con el nombre del desarrollador del mismo */
+    display:            flex;
+    justify-content:    center;
+    margin-top:         10px;
+    background:         #000;
+}
+
+.pie{                                       /* Alineación del contenido del pie de página */
+    text-align:     center;
+    font-size:      11px;
+    text-transform: uppercase;
+    padding:        10px 10px;
+    letter-spacing: 2px;
+    color:          var(--text-color);
+}
+
+
+/* DISEÑOS RESPONSIVE */
+@media all and (max-width: 1295px){         /* Altera el orden de los elementos dentro de la página */
+    .menu{                                  /* Modifica el tamaño del texto de distintos elementos */
+        flex-direction: column;
+        height:         auto;
+    }
+    .section{
+        flex-direction: column;
+    }
+    .articles{
+        width:          100%;
+    }
+    aside{
+        display:        flex;
+        flex-direction: row;
+        justify-content:center;
+        gap:            10px;
+    }
+    .texto-principal{
+        height:         450px;
+        align-items:    flex-end;
+    }
+}
+
+@media all and (max-width: 852px){          /* Altera el orden de los artículos colocandolos uno encima de otro */
+    .articles{                              /* Quita el texto del menu */
+        flex-direction: column;             /* Aumenta el tamaño de los simbolos */
+    }
+    .off{                                   
+        display:    none;
+    }
+    nav a{
+        font-size:  17px;
+    }
+}
+
+@media all and (max-width: 475px){          /* Disminuye el tamaño de los artículos centrales */
+    .articles{                              /* Altera el orden de los artículos de un costado colocandolos uno encima de otro */
+        width:      80%;
+    }
+    aside{
+        flex-direction: column;
+    }
+}
