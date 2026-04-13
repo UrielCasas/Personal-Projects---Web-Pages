@@ -1,5 +1,5 @@
 :root{
-    --text-black:       #000000;
+    --text-black:       #303030;
     --text-dark-gray:   #2f2f2f;
     --text-gray:        #b0b0b0;
     --sub-subtitle:     #d15959;
@@ -34,6 +34,52 @@ input[type="checkbox"]{         /* Para el menu de navegación */
     display:    none;
 }
 
+/* EMPIEZA - BLOOSTRAP */
+
+.opacity-navbar{
+    transition: 0.2s ease;
+}
+
+.opacity-navbar:hover{
+    opacity:    0.8;
+}
+
+.vertices-round{
+    border-radius:      10px;
+    align-items:        center;
+    background-color:   var(--background-white);
+}
+
+.texto-links{
+    font-size:  16px;
+    font-weight:600;
+    color:      var(--text-black);
+}
+
+.btn-custom {
+    background-color: #4a3a90;
+    color:            white;
+    transition: 0.2s ease;
+}
+
+.btn-custom:hover {
+    background-color: #5a49a3;
+    color:            white;
+}
+
+.contactanos{
+    padding:         20px;
+    border-radius:   10px;
+    background-color:rgba(210, 210, 210, 0.6);
+}
+
+@media (max-width: 768px) {
+    .vertices-round {
+        border-radius: 0;
+    }
+}
+
+/* TERMINA - BLOOSTRAP */
 
 header{
     display:    flex;
@@ -74,7 +120,7 @@ header{
     .menu-icon{
         display:    none;
         cursor:     pointer;        /* Cambia la mano del mouse al pasarlo encima */
-        position:   absolute;       /* Lo posiciona lo más cercano a su ancestro */
+        position:   absolute;       /* Lo posiciona lo más cercano a su ancestro (tal vez debido al FOR y el ID) */
         right:      20px;
         top:        15px;
         font-size:  24px;
@@ -118,9 +164,11 @@ header{
     justify-content:center;
     align-items:    center;
     background:     var(--background-white);
+    padding:        30px 0;
 }
 
     .title a h1{
+        padding-top:    10px;
         transition:     0.2s ease;
         color:          var(--text-dark-gray);
     }
@@ -138,13 +186,13 @@ header{
         opacity:    0.8;
     }
 
-
-.container{                             /* Contenedor central con información del arte y del dojo */
+/* 
+.container{                              Contenedor central con información del arte y del dojo 
     display:    grid;
     align-items:center;
     background-color:var(--background-white);
     gap:        10px;
-}
+} */
 
     .container-item{
         place-items:     center;
@@ -181,36 +229,39 @@ header{
     }
 
     .container-item img{
-        width:          100%;
-        height:         auto;
-        border-radius:  10px;
         display:        block;
+        width:          90%;
+        height:         auto;
+        margin:         0 auto;
+        border-radius:  10px;
     }
 
 
 .background{                            /* Información de días, horarios y ubicación de las clases */
-    background:             url(../images/pater-gym.jpg);
+    background:             url(../images/pater-gym-dojo.jpg);
     background-position:    center;
     background-size:        cover;
     padding:                30px 25px;
 }
 
 .consult{
-    display:         grid;
+    /* display:         grid; */
     text-align:      center;
-    grid-auto-rows:  minmax(auto, auto);
-    padding:         0 10px 10px;
-    gap:             20px;
+    /* grid-auto-rows:  minmax(auto, auto); */
+    /* padding:         0 10px 10px; */
+    /* gap:             20px; */
     border-radius:   10px;
     background-color:rgba(184, 184, 184, 0.7);
 }
 
     .consult-text{
         justify-items:  center;
+
     }
 
     .consult-text h2{
         font-size:      34px;
+        font-weight:    700;
     }
     
     .consult-text h3{
@@ -224,9 +275,9 @@ header{
     }
 
     .cronograma i{
-        font-size:  40px;
-        padding:    20px 0 0;
-        color:      var(--icon-purple);
+        font-size:      40px;
+        padding-top:    20px;
+        color:          var(--icon-purple);
     }
 
     .cronograma h2{
@@ -234,13 +285,12 @@ header{
     }
 
     .cronograma h3{
-        text-align: left;
-        font-weight:700;
+        font-weight:600;
+        font-size:  24px;
     }
 
     .cronograma p{
-        text-align:  left;
-        padding-left:7px;
+        /* padding-left:7px; */
         font-weight:500;
     }
 
@@ -251,9 +301,9 @@ header{
     }
 
     .ubicacion i{
-        font-size:  40px;
-        padding:    20px 0 0;
-        color:      var(--icon-purple);
+        font-size:      40px;
+        padding-top:    20px;
+        color:          var(--icon-purple);
     }
     
     .ubicacion h2{
@@ -266,9 +316,11 @@ header{
     }
 
     .map{
-        display:        flex;
-        justify-content:center;
-        align-items:    center;
+        display:          flex;
+        justify-content:  center;
+        align-items:      center;
+        background-color: transparent;
+        /* padding:          0 0 10px; */
     }
 
     iframe{
@@ -444,7 +496,7 @@ footer{                                 /* Sección inferior de la página con l
     }
 
     .container{
-        grid-template-columns:  repeat(2, 1fr);
+        /* grid-template-columns:  repeat(2, 1fr); */
         gap:        0;
         margin-top: 80px;
     }
@@ -494,50 +546,46 @@ footer{                                 /* Sección inferior de la página con l
         grid-column:2/3;
         grid-row:   3/4;
         display:         flex;
-        justify-self:    center;
-        width:           90%;
+        justify-self:    end;
+        width:           80%;
     }
     
     .background{
         padding:    30px 0;
     }
 
-    .consult{
+    /* .consult{
         grid-template-columns:  repeat(2, 1fr);
         gap:   30px; 
-    }
+    } */
 
-    .consult-text{
+    /* .consult-text{
         grid-column:1/3;
-    }
+    } */
 
-    .cronograma{
+    /* .cronograma{
         grid-column:1/2;
         grid-row:   2/3;
-    }
+    } */
 
     .cronograma h3, .cronograma p{
         text-align: center;
     }
 
-    .ubicacion{
+    /* .ubicacion{
         grid-column:1/2;
         grid-row:   3/4;
-    }
+    } */
 
-    .map{
+    /* .map{
         grid-column:2/3;
         grid-row:   2/4;
-        width: 100%;
-        height: 100%;
-    }
+    } */
 
-    iframe{
+    /* iframe{
         grid-column:2/3;
         grid-row:   2/4;
-        width: 100%;
-        height: 100%;
-    }
+    } */
 
     .social{
         justify-content: flex-end;
@@ -549,19 +597,19 @@ footer{                                 /* Sección inferior de la página con l
 }
 
 @media(min-width:940px){
-    .container{
+    /* .container{
         max-width:   1000px;
         margin:      80px; 
         margin-left: auto;
         margin-right:auto;
-    }
+    } */
 
-    .consult{
+    /* .consult{
         max-width:   1000px;
         margin:      60px;
         margin-left: auto;
         margin-right:auto;
-    }
+    } */
 
     .social{
         max-width:   1000px;
@@ -574,3 +622,4 @@ footer{                                 /* Sección inferior de la página con l
         max-width:   200px;
     }
 }
+
